@@ -1,0 +1,253 @@
+.container {
+  height: 600vh;
+  /* border: 15px solid aquamarine; */
+  position: relative;
+  background-color: cadetblue;
+  width: 100%;
+}
+ 
+.left-side {
+  /* display: block; */
+  height: 100vh;
+  /*width: 50%;*/
+  background-color: #1e1e1f;
+  position: sticky;
+  top: 0;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.test {
+  background-color: rgb(97, 126, 195);
+  height: 100px;
+}
+
+.right-side {
+  background-color: rgb(31, 85, 114);
+  height: 1600px;
+  width: 50px;
+  /* position: absolute; */
+  display: block;
+}
+
+.album1, .album2, .album3, .album4, .album5 {
+  z-index: 1;
+  position: absolute;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.album1 {
+  top: 23%;
+  animation: album1 var(--anim-duration) linear infinite alternate;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * (-1*var(--anim-duration)));
+}
+
+
+.album2 {
+  top: 35%;
+  animation: album2 var(--anim-duration) linear infinite alternate;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * (-1*var(--anim-duration)));
+}
+
+.album3 {
+  top: 45%;
+  animation: album3 var(--anim-duration) linear infinite alternate;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * (-1*var(--anim-duration)));
+}
+
+.album4 {
+  top: 60%;
+  animation: album4 var(--anim-duration) linear infinite alternate;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * (-1*var(--anim-duration)));
+}
+
+.album5 {
+  top: 45%;
+  animation: album5 var(--anim-duration) linear infinite alternate;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * (-1*var(--anim-duration)));
+}
+
+.path {
+  z-index: 1;
+  width: 275px;
+  height: 275px;
+  top: 30%;
+  position: absolute;
+  background:radial-gradient(circle 170px at top left,transparent 95%,#000,transparent) fixed;
+}
+
+@keyframes album1 {
+  0% {
+    transform: translate(30px, 0px);
+  }
+  100% {
+    transform:  translate(50px, 25px);
+  }
+}
+
+@keyframes album2 {
+  0% {
+    transform: translate(85px);
+  }
+  100% {
+    transform:  translate(0px);
+  }
+}
+
+@keyframes album3 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform:  translate(250px, -250px);
+  }
+}
+
+@keyframes album4 {
+  0% {
+    transform: translate(120px, 0px);
+  }
+  100% {
+    transform:  translate(175px, -130px);
+  }
+}
+
+@keyframes album5 {
+  0% {
+    transform: translate(-50px, 60px);
+  }
+  100% {
+    transform:  translate(100px, 110px);
+  }
+}
+
+.mainAlbumContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.mainAlbum2 {
+  position: relative;
+  height: 75%;
+  overflow: hidden;
+}
+
+.mainAlbum {
+  position: relative;
+  /*left: 50%;*/
+  width: 30vw;
+  height: 30vw;
+  /* margin-bottom: -13%; */
+  overflow: hidden;
+  transform: translate(-50%,-25%);
+  /*background-color: #111;
+  border: 1px solid #111;
+  border-radius: 50%;
+  /* box-shadow:
+    /*0 0.0625em 0.1875em rgba(0,0,0,0.5),
+    0 0 0.125em 0.3125em #ddd,
+    0 0.0625em 0 0.375em #bbb,
+    0 0 0.375em 0.325em rgba(0,0,0,0.3), *
+    0 0 0.5em 0.375em rgba(0,0,0,0.3),
+    0 0.25em 1em 0.5em rgba(0,0,0,0.15),
+    inset 0 0 0 0.0625em rgba(0,0,0,0.5),
+    inset 0 0 0 0.1875em rgba(255,255,255,1),
+    inset 0 0 0 0.375em rgba(0,0,0,0.5),
+    inset 0 0 0 0.4375em rgba(255,255,255,0.2),
+    inset 0 0 0 0.5em rgba(0,0,0,0.5),
+    inset 0 0 0 0.5625em rgba(255,255,255,0.3),
+    inset 0 0 0 0.625em rgba(0,0,0,0.5),
+    inset 0 0 0 0.6875em rgba(255,255,255,0.2),
+    inset 0 0 0 0.75em rgba(0,0,0,0.5),
+    inset 0 0 0 0.8125em rgba(255,255,255,0.3),
+    inset 0 0 0 0.875em rgba(0,0,0,0.5),
+    inset 0 0 0 0.9375em rgba(255,255,255,0.3),
+    inset 0 0 0 1em rgba(0,0,0,0.5),
+    inset 0 0 0 1.0625em rgba(255,255,255,0.2),
+    inset 0 0 0 1.125em rgba(0,0,0,0.5),
+    inset 0 0 0 1.1875em rgba(255,255,255,0.3),
+    inset 0 0 0 1.25em rgba(0,0,0,0.5),
+    inset 0 0 0 1.3125em rgba(255,255,255,0.2),
+    inset 0 0 0 1.375em rgba(255,255,255,0.2),
+    inset 0 0 0 1.4375em rgba(0,0,0,0.5),
+    inset 0 0 0 1.5em rgba(255,255,255,0.3),
+    inset 0 0 0 1.5625em rgba(0,0,0,0.5),
+    inset 0 0 0 1.625em rgba(255,255,255,0.3),
+    inset 0 0 0 1.6875em rgba(0,0,0,0.5),
+    inset 0 0 0 1.75em rgba(255,255,255,0.2),
+    inset 0 0 0 1.8125em rgba(0,0,0,0.5),
+    inset 0 0 0 1.875em rgba(255,255,255,0.2),
+    inset 0 0 0 1.9375em rgba(0,0,0,0.5),
+    inset 0 0 0 2em rgba(255,255,255,0.3),
+    inset 0 0 0 2.0625em rgba(0,0,0,0.5),
+    inset 0 0 0 2.125em rgba(0,0,0,0.5),
+    inset 0 0 0 2.1875em rgba(255,255,255,0.1),
+    inset 0 0 0 2.25em rgba(0,0,0,0.5),
+    inset 0 0 0 2.3125em rgba(255,255,255,0.2),
+    inset 0 0 0 2.375em rgba(255,255,255,0.1),
+    inset 0 0 0 2.4375em rgba(0,0,0,0.5),
+    inset 0 0 0 2.5em rgba(255,255,255,0.3),
+    inset 0 0 0 2.5625em rgba(0,0,0,0.5),
+    inset 0 0 0 2.625em rgba(255,255,255,0.2),
+    inset 0 0 0 2.6875em rgba(0,0,0,0.5),
+    inset 0 0 0 2.75em rgba(255,255,255,0.2),
+    inset 0 0 0 2.8125em rgba(0,0,0,0.5),
+    inset 0 0 0 2.875em rgba(255,255,255,0.2),
+    inset 0 0 0 2.9375em rgba(0,0,0,0.5),
+    inset 0 0 0 3em rgba(255,255,255,0.3),
+    inset 0 0 0 3.0625em rgba(0,0,0,0.5),
+    inset 0 0 0 3.125em rgba(0,0,0,0.5),
+    inset 0 0 0 3.1875em rgba(255,255,255,0.2),
+    inset 0 0 0 3.25em rgba(0,0,0,0.5),
+    inset 0 0 0 3.3125em rgba(255,255,255,0.2),
+    inset 0 0 0 3.375em rgba(255,255,255,0.1),
+    inset 0 0 0 3.4375em rgba(0,0,0,0.5),
+    inset 0 0 0 3.5em rgba(255,255,255,0.3); */
+}
+
+.mainAlbum::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%,-50%);
+  background-image:
+    linear-gradient(
+      -45deg,
+      rgba(255,255,255,0) 30%,
+      rgba(255,255,255,0.125),
+      rgba(255,255,255,0) 70%
+    ),
+    linear-gradient(
+      -48deg,
+      rgba(255,255,255,0) 45%,
+      rgba(255,255,255,0.075),
+      rgba(255,255,255,0) 55%
+    ),
+    linear-gradient(
+      -42deg,
+      rgba(255,255,255,0) 45%,
+      rgba(255,255,255,0.075),
+      rgba(255,255,255,0) 55%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(0,0,0,1) 20%,
+      rgba(0,0,0,0) 80%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,0,0,1) 20%,
+      rgba(0,0,0,0) 80%
+    );
+}
